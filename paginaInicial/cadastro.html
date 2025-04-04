@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro SESI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('./images/wallpapper.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .top-bar {
+            height: 40px;
+            background-color: #d32f2f;
+            width: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+        .container {
+            text-align: center;
+            width: 100%;
+        }
+
+        .header {
+            padding: auto;
+            position: relative;
+            color: white;
+            text-align: left;
+            position: relative;
+            right: 10px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            width: 200px; 
+            margin-right: 1280px; 
+            height: 60px;
+            position: relative; 
+            top: -80px;
+        }
+
+        .header a {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            text-decoration: none;
+        }
+
+        .form-container {
+            background-color: #e0e0e0;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 450px; 
+            margin: 5px auto;
+        }
+
+        .form-container h2 {
+            color: #000000;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 20px;
+            margin: 10px 0;
+            border: 3px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .show-password {
+            display: block;
+            text-align: right;
+            font-size: 12px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            color: #d32f2f;
+            cursor: pointer;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-container input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #c1272d;
+        }
+
+        .footer {
+            background-color: #f5f5f5;
+            padding: 20px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer img {
+            width: 50px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar"></div>
+    <div class="header">
+        <img src="./images/sesilogo.png" >
+        <a href="#">Login</a>
+    </div>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>Cadastre-se</h2>
+            <form id="cadastroForm">
+                <input type="text" name="name" placeholder="Nome" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" id="password" placeholder="Senha" required>
+                <span class="show-password" onclick="togglePassword()">Mostrar senha</span>
+                <label>
+                    <input type="checkbox" name="notifications"> Gostaria de receber notificações
+                </label>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+
+        document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

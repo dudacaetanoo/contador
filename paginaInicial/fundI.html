@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamental 1</title>
+    <style>
+        body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e63946;
+    background-image: url('./images/wallpapper.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+        header {
+            background-color: #e63946;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .search-bar {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 12px;
+            border: 2px solid #ff6b6b;
+            border-radius: 25px;
+            outline: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        input[type="text"]:focus {
+            border-color: #ff8787;
+            box-shadow: 0 4px 10px #0000001a;
+        }
+        .button {
+            display: block;
+            background-color: #ff4d4d;
+            color: #fff;
+            padding: 15px;
+            margin: 10px auto;
+            text-align: center;
+            border-radius: 25px;
+            text-decoration: none;
+            width: 80%;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .button:hover {
+            background-color: #ff6666;
+            transform: translateY(-5px);
+        }
+        #subButtons {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        @media (min-width: 600px) {
+            #subButtons {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        a.button {
+            background-color: #d90429;
+        }
+        a.button:hover {
+            background-color: #ef233c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Ensino Fundamental I 
+    </header>
+    <div id="subButtons" class="sub-buttons">
+        <button class="button" onclick="location.href='contador.html'">1º Ano</button>
+        <button class="button" onclick="location.href='contador.html'">2º Ano</button>
+        <button class="button" onclick="location.href='contador.html'">3º Ano</button>
+        <button class="button" onclick="location.href='contador.html'">4º Ano</button>
+        <button class="button" onclick="location.href='contador.html'">5º Ano</button>
+        <a href="index.html" class="button">Voltar para Início</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+        header {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .search-bar {
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .welcome {
+            text-align: center;
+            margin: 20px 0;
+        }
+        img {
+            width: 150px; 
+            height: 150px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+        }
+        .button {
+            display: block;
+            background-color: #ccc;
+            color: #333;
+            padding: 15px;
+            margin: 10px auto;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            width: 80%;
+        }
+        .button:hover {
+            background-color: #bbb;
+        }
+        .button-voltar {
+            display: block;
+            background-color: #28a745;
+            color: white;
+            padding: 15px;
+            margin: 10px auto;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            width: 80%;
+        }
+        .button-voltar:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Início</h1>
+    </header>
+    <div class="search-bar">
+        <input type="text" placeholder="Pesquisar...">
+    </div>
+    <div class="welcome">
+        <p>Seja bem-vindo(a), a nosso Contator.</p>
+        <img src="images/logo sesi.png" alt="SESI"> 
+    </div>
+    <div id="subButtons" class="sub-buttons">
+        <button class="button" onclick="location.href='salas.html'">Salas</button>
+        <button class="button" onclick="location.href='inicio.html'">Contagem Final</button>
+        <button class="button-voltar" onclick="location.href='inicio.html'">Voltar</button>
+    </div>    
+</body>
+</html>

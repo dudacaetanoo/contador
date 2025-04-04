@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem de Alunos</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #000000, #000000);
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            margin: auto;
+            width: 360px;
+            border: 3px solid rgb(144, 18, 144); 
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="number"] {
+            width: 60px;
+            text-align: center;
+            font-size: 16px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #00FF7F;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #2bc02d;
+        }
+        .tabela {
+            margin-top: 20px;
+            text-align: left;
+            background: #ffecec;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .tabela p {
+            font-size: 16px;
+            color: #444;
+        }
+        .resultado {
+            font-weight: bold;
+            color: #6A0DAD;
+        }
+        .botao-voltar {
+            background-color: #FF6347;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contagem de Alunos</h1>
+    <div class="container">
+        <label>Café da Manhã:</label>
+        <input type="number" value="0" id="cafeManha"><br>
+        <label>Almoço:</label>
+        <input type="number" value="0" id="cafeAlmoco"><br>
+        <label>Café da Tarde:</label>
+        <input type="number" value="0" id="cafeTarde"><br>
+        <button onclick="atualizarLista()">Atualizar Lista</button>
+        <button class="botao-voltar" onclick="window.history.back()">Voltar</button>
+
+        <div class="tabela">
+            <p>Café da Manhã: <span class="resultado" id="resultadoManha">0</span></p>
+            <p>Almoço: <span class="resultado" id="resultadoAlmoco">0</span></p>
+            <p>Café da Tarde: <span class="resultado" id="resultadoTarde">0</span></p>
+        </div>
+    </div>
+
+    <script>
+        function atualizarLista() {
+            document.getElementById('resultadoManha').innerText = document.getElementById('cafeManha').value;
+            document.getElementById('resultadoAlmoco').innerText = document.getElementById('cafeAlmoco').value;
+            document.getElementById('resultadoTarde').innerText = document.getElementById('cafeTarde').value;
+        }
+    </script>
+</body>
+</html>
